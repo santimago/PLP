@@ -1,0 +1,23 @@
+1)
+  a) V
+  b) V
+  c) ?
+  d) V
+  e) F // primeira geracao == [0,1] segunda geracao == [assembly] terceira geração == [C, Pascal], quart == [Prolog]
+  f) V
+  g) V ? Contrução de linguagens afetadas pelo hardware e tecnologia
+  h) F
+  i) V Simula67 Suporta herança?
+  j) F
+
+  2) Exemplos de linguagens cujo projeto foram caracterizados por:
+    a) Portabilidade e Eficiência
+        C
+    b) Confiabilidade e Portabilidade
+        Java
+    c) Simplicidade e Extensibilidade
+        Python
+    d) Confiabilidade e Ortogonalidade
+    e) Eficiência e Extensibilidade
+        C++
+    
