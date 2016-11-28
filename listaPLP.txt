@@ -1,6 +1,5 @@
 1)
   a) Verdadeiro pois,
-        de acordo com techopedia em (https://www.techopedia.com/definition/4230/backward-compatible),
         compatibilidade reversa refere-se a um sistema de hardware ou software que pode utilizar
         a interface de uma versão mais antiga do mesmo produto.
         Logo, a compatibilidade entre compiladores de versões distintas de Java e C/C++ pode
@@ -14,7 +13,7 @@
         de utilizar o mesmo software em diferentes ambientes (sistemas operacionais e
         plataformas de hardware). O pré-requisito da portabilidade é uma boa abstração
         entre lógica de aplicação e interfaces de sistema. Uma linguagem capaz de servir
-        a diferentes contextos de aplicação é chamada de linguagem de próposito geral.
+        a diferentes contextos de aplicação é chamada de linguagem de propósito geral.
 
   d) Verdadeiro pois, a sobrecarga de operadores é muito prática para o programador,
       realizando uma operação de maneira mais abstrata e compreenssível:
