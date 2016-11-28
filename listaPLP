@@ -1,36 +1,68 @@
 1)
   a) Verdadeiro pois,
-    de acordo com techopedia em (https://www.techopedia.com/definition/4230/backward-compatible),
-    compatibilidade reversa refere-se a um sistema de hardware ou software que pode utilizar
-    a interface de uma versão mais antiga do mesmo produto.
-    Logo, a compatibilidade entre compiladores de versões distintas de Java e C/C++ pode
-    ser encarada como um exemplo de compatibilidade reversa.
+        de acordo com techopedia em (https://www.techopedia.com/definition/4230/backward-compatible),
+        compatibilidade reversa refere-se a um sistema de hardware ou software que pode utilizar
+        a interface de uma versão mais antiga do mesmo produto.
+        Logo, a compatibilidade entre compiladores de versões distintas de Java e C/C++ pode
+        ser encarada como um exemplo de compatibilidade reversa.
 
   b)Verdadeiro pois a checagem logo na compilação, evita compilar código sem definição de tipos,
-     ou tentativa de operações inválidas com tipos diferentes. Sinalizando de imediato o erro,
-     assim evitando que operações inválidas compilem e tenham saídas erradas.
+       ou tentativa de operações inválidas com tipos diferentes. Sinalizando de imediato o erro,
+       assim evitando que operações inválidas compilem e tenham saídas erradas.
 
   c) Falso. Portabilidade em linguagens de programação de alto-nível é a capacidade
-  de utilizar o mesmo software em diferentes ambientes (sistemas operacionais e
-  plataformas de hardware). O pré-requisito da portabilidade é uma boa abstração
-   entre lógica de aplicação e interfaces de sistema. Uma linguagem capaz de servir
-   a diferentes contextos de aplicação é chamada de linguagem de próposito geral.
+        de utilizar o mesmo software em diferentes ambientes (sistemas operacionais e
+        plataformas de hardware). O pré-requisito da portabilidade é uma boa abstração
+        entre lógica de aplicação e interfaces de sistema. Uma linguagem capaz de servir
+        a diferentes contextos de aplicação é chamada de linguagem de próposito geral.
 
-  d) V
-  e) F // primeira geracao == [0,1] segunda geracao == [assembly] terceira geração == [C, Pascal], quart == [Prolog]
-  f) V
-  g) V ? Contrução de linguagens afetadas pelo hardware e tecnologia
-  h) F
-  i) V Simula67 Suporta herança?
-  j) F
+  d) Verdadeiro pois, a sobrecarga de operadores é muito prática para o programador,
+      realizando uma operação de maneira mais abstrata e compreenssível:
+        3*'a' == 'aaa'
+      entretanto a sobrecarga de operadores pode prejudicar a ortogonalidade da linguagem, pois
+      esconde o comportamento de uma entidade atrás do mecanismo chamado de 'syntactic sugar'.
+      Desta forma, não podemos aferir imediatamente o comportamento de expressões como:
+        2.5*'a' ou mesmo 'a'**3
+      o que vai contra os princípios da ortogonalidade.
 
-  2) Exemplos de linguagens cujo projeto foram caracterizados por:
-    a) Portabilidade e Eficiência
-        C
-    b) Confiabilidade e Portabilidade
-        Java
-    c) Simplicidade e Extensibilidade
-        Python
-    d) Confiabilidade e Ortogonalidade
-    e) Eficiência e Extensibilidade
-        C++
+  e) Falso pois, a primeira geração se caracteriza pela programação em hardware,
+        utilizando binário. A segunda geração foi constituída pelas linguagens
+        assembly e a terceira inclui a maioria das linguagens de auto nível utilizadas
+        atualmente, como C, Java e Python. A literatura diverge quanto ao agrupamento
+        das linguagens subsequentes como Prolog, e ferramentas de programação visual.
+        No índice TIOBE, a linguagem mais antiga entre os primeiros 20 colocados
+        pertence à segunda geração (Assembly).
+
+  f) Verdadeiro. Java força determinadas práticas de programação, como o uso de
+        exceções. Seu coletor de lixo em conjunto com sua política de passar argumentos
+        como referências torna desnecessário o uso explícito de ponteiros, evitando
+        todas as complicações decorrentes deste.
+
+  g) Verdadeiro. Java surgiu como uma resposta as necessidades da internet, muito
+        embora hoje esta não seja sua maior aplicação. O projeto de uma linguagem
+        como Julia apenas tornou-se possível com o amadurecimento da computação
+        paralela, sistemas distribuídos e computação em nuvem. Smalltalk foi projetada
+        tendo em mente uma computação do futuro, sistemas complexos onde a modelagem
+        orientada à objetos tornaria-se vital.
+  h) Verdadeiro. Linguagens funcionais são fundamentadas no conceito de transparência
+        referencial e possuem poucos ou nenhum estado compartilhado, o que implica
+        em cada sub-expressão poder ser avaliada em paralelo pela máquina, assim
+        que seus componentes se tornam conhecidos. Exemplos são as funções map,
+        reduce e filter, em Python.
+  i) F, Simula67 Suporta herança através de prefixos, além de possuir sobrecarga
+        de métodos herdados.
+
+  j) Falso, na verdade os termos 'linguagem de script' e 'linguagem de propósito geral'
+        são diametralmente opostos.
+
+2)
+a) Portabilidade e Eficiência
+    C
+b) Confiabilidade e Portabilidade
+    Java
+c) Simplicidade e Extensibilidade
+    Python
+d) Confiabilidade e Ortogonalidade
+    Lisp
+e) Eficiência e Extensibilidade
+    C++
