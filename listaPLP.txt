@@ -1,4 +1,4 @@
-1)
+  1)
   a) Verdadeiro pois,
         compatibilidade reversa refere-se a um sistema de hardware ou software que pode utilizar
         a interface de uma versão mais antiga do mesmo produto.
