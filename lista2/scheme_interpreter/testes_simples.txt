@@ -1,0 +1,14 @@
+(+ 1 2)
+(+ (- 1 2) (* 3 4))
+(length (list 1 2 3))
+(car (list 1 2 3))
+(cdr (list 1 2 3))
+(define x 10)
+x
+(+ x 2)
+(begin (define pi 3.14) (* 2 (* pi pi)))
+(cons 3 (list 1 2))
+(define rest (cdr (list (quote a) (quote b) (quote c))))
+rest
+(if (null? (cdr (list 1 2))) (quote vazio) (quote (nao vazio)))
+(if (> (* 11 11) 120) (* 7 6) oops)

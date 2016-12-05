@@ -60,5 +60,3 @@ def getatom(token):
 
 #print get_token([c for c in 'sqrt 3)'])
 #print get_token([c for c in '(sqrt 3)'])
-
-print get_semantic_tree('(eq2grau -1 (fatorial 4) 3)')

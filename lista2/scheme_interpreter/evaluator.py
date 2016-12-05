@@ -1,5 +1,5 @@
 
-
+from parser import *
 
 def create_env():
     dic = {}
@@ -11,6 +11,18 @@ def create_env():
     dic['cdr'] = lambda x: x[1:]
     dic['list'] = lambda *elements: list(elements)
     dic['length'] = lambda l: len(l)
+    dic['%'] = lambda x, y: x % y
+    dic['>'] = lambda x, y: x > y
+    dic['<'] = lambda x, y: x < y
+    dic['<='] = lambda x, y: x <= y
+    dic['='] = lambda x, y: x == y
+    dic['cons'] = lambda e, lst: [e] + lst
+    dic['null?'] = lambda e: e == None or len(e) == 0 or e == ''
+    dic['list?'] = lambda l: type(l) == list
+    dic['number?'] = lambda n: type(n) == float or type(n) == int
+    dic['if'] = lambda cond, then, else_: then if cond else else_
+    #dic['begin'] = lambda l: l[-1]
+
     return dic
 
 
@@ -29,6 +41,14 @@ def eval(x, env):
     elif x[0] == 'define':  # definicao
         [_, var, exp] = x
         env[var] = eval(exp, env)
+    elif x[0] == 'quote':
+        # retorna sem avaliar
+        return x[1:]
+    elif x[0] == 'begin':
+        # avalia as expressoes restantes
+        values = map(lambda exp : eval(exp, env), x[1:])
+        #retorna a ultima
+        return values[-1]
     else:  # chamada de funcao
         proc = eval(x[0], env)
         args = [eval(arg, env) for arg in x[1:]]
@@ -59,5 +79,6 @@ def scheme(prompt='> '):
             return
         except Exception as e:  # exibe mensagem da excecao, caso ocorra
             print '%s: %s' % (type(e).__name__, e)
-        if __name__ == '__main__':
-            scheme()
+
+if __name__ == '__main__':
+    scheme()
