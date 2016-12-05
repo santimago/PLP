@@ -30,6 +30,7 @@
     fractais ou os conjuntos numéricos como os Fatoriais e a sequência de Fibonacci.
     Ao final, boa parte das estruturas de dados computacionais utilizam algoritmos
     recursivos, como listas e árvores.
+
   Funções puras:
     O conceito de função pura está associado a definição matemática de função da forma
     y = f(x). Neste contexto uma função f que recebe como argumento x, sempre resolve
@@ -38,15 +39,18 @@
     Em computação, uma função que altera o valor de seus argumentos passados por
     referência, ou altera/utiliza variáveis 'globais' mutáveis em sua computação é
     inerentemente impura.
+
   Efeito colateral:
     Em geral a expressão 'efeito colateral' refere-se à eventos ou procedimentos
     que produzem efeitos indiretos ou implícitos em um sistema. Uma função que
     altera valores passados por referência ou globais produz efeitos colaterais
     pois essas alterações independem de seu retorno e são transparentes à entidade
     que a chama.
+
   Iteradores:
     Iteradores são objetos que consomem coleções. Em geral são implementados
     através de um método next() que retorna o próximo elemento da coleção.
+
   Geradores:
     Geradores por sua vez, são tipos especiais de iteradores que não apenas iteram
     sob a coleção, mas também as produzem dinamicamente. São utilizados em algumas
