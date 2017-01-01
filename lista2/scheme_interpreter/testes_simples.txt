@@ -12,3 +12,10 @@ x
 rest
 (if (null? (cdr (list 1 2))) (quote vazio) (quote (nao vazio)))
 (if (> (* 11 11) 120) (* 7 6) oops)
+(define fatorial (lambda (n) (if (<= n 1) 1 (* n (fatorial (- n 1))))))
+(define print_n (lambda (n) (n)))
+(define maior_que_0 (lambda (n) (if (> n 0) (quote SIM) (quote NAO))))
+(define fatorial (lambda (n) (if (<= n 1) (1) (* n (fatorial (- n 1))))))
+(define imposto (lambda (taxa) (lambda (val) (* val taxa))))
+(define icms (imposto 0.18))
+(icms 100)
