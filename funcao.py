@@ -1,6 +1,9 @@
-def getPotencia(potencia):
-    return lambda x : x ** 2
+from my_class import c
 
-cubo = getPotencia(3)
+obj = c('passado_const')
 
-print cubo(2)
+obj.printf()
+
+obj.estatica()
+
+print c.param_int

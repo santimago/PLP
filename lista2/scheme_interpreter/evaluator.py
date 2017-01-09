@@ -3,7 +3,7 @@ import traceback
 
 def create_env():
     dic = {}
-    
+
     dic['parent'] = None
     dic['+'] = lambda x, y: x + y
     dic['/'] = lambda x, y: x / y
@@ -71,7 +71,6 @@ def eval(x, env):
         # retorna uma funcao que avalia body dentro de um novo ambiente quando passamos
         # params como parametros, o novo ambiente contem os parametros pareados com seus valores
         # passados como argumento para a expressao, assim como aponta para o env que o criou
-        #local_env = merge(dict(zip(args, params)), {'parent' : env})
         return lambda *params: eval(body, merge(dict(zip(args, params)), {'parent' : env}))
     else:  # chamada de funcao
         proc = eval(x[0], env)
