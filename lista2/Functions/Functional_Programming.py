@@ -33,13 +33,12 @@ print remove_duplicatas(lst)
 
 def triade(n, m):
     l = range(n, m+1)
-    l2 = []
-    [l2.append((a,b,c)) for a in l for b in l for c in l if a*a + b*b == c*c]
-    return l2
+    return [(a,b,c) for a in l for b in l for c in l if a*a + b*b == c*c]
 
 print triade(1,10)
 
 # 6)
+
 lst2 = [4, 7, 8, 2, 1]
 
 #print map(lambda n: n+2, filter(lambda m: m>3, lst2))
@@ -85,6 +84,7 @@ def repeatf(n, fs, arg):
 #repeatf(4, [lambda n: n-1, printf], 5)
 
 
+"""
 def myFilter(c, L):
     if not L:
         return []
@@ -92,3 +92,4 @@ def myFilter(c, L):
         return [L[0]] + myFilter(c, L[1:]) if c(L[0]) else myFilter(c, L[1:])
 
 print myFilter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5])
+"""
