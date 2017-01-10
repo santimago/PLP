@@ -65,7 +65,7 @@ def mapseq(fs, arg):
         return fs[0](mapseq(fs[1:], arg))
 
 
-#print mapseq([sqrt, sum, lambda l: [x*x for x in l]], range(5))
+# print mapseq([sqrt, sum, lambda l: [x*x for x in l]], range(5))
 
 
 #8)
@@ -83,3 +83,12 @@ def repeatf(n, fs, arg):
 
 
 #repeatf(4, [lambda n: n-1, printf], 5)
+
+
+def myFilter(c, L):
+    if not L:
+        return []
+    else:
+        return [L[0]] + myFilter(c, L[1:]) if c(L[0]) else myFilter(c, L[1:])
+
+print myFilter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5])

@@ -22,6 +22,8 @@ def create_env():
     dic['-'] = lambda x, y: x - y
     dic['*'] = lambda x, y: x * y
     dic['<='] = lambda x, y: x <= y
+    dic['true'] = True
+    dic['false'] = False
 
 
     return dic
