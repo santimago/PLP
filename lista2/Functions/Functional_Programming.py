@@ -29,8 +29,7 @@ def remove_duplicatas(lst):
 print remove_duplicatas(lst)
 
 
-# 5) TODO tem que programar isso aqui
-
+# 5) triada
 def triade(n, m):
     l = range(n, m+1)
     l2 = []
