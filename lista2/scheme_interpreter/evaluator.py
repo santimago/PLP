@@ -10,6 +10,7 @@ def create_env():
     dic['car'] = lambda x: x[0]
     dic['cdr'] = lambda x: x[1:]
     dic['list'] = lambda *elements: list(elements)
+    dic['new_list'] = lambda: []
     dic['length'] = lambda l: len(l)
     dic['%'] = lambda x, y: x % y
     dic['>'] = lambda x, y: x > y
