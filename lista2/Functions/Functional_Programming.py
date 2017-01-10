@@ -30,11 +30,14 @@ print remove_duplicatas(lst)
 
 
 # 5) TODO tem que programar isso aqui
+
 def triade(n, m):
-    return [n for n in range(n, m + 1)]
+    l = range(n, m+1)
+    l2 = []
+    [l2.append((a,b,c)) for a in l for b in l for c in l if a*a + b*b == c*c]
+    return l2
 
-
-# print triade(1,10)
+print triade(1,10)
 
 # 6)
 lst2 = [4, 7, 8, 2, 1]
