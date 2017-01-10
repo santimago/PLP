@@ -19,3 +19,24 @@ rest
 (define imposto (lambda (taxa) (lambda (val) (* val taxa))))
 (define icms (imposto 0.18))
 (icms 100)
+(define range (lambda (ini fim) (if (= ini fim) (quote ) (cons ini (range (+ ini 1) fim)))))
+(define map (lambda (f L) (if L (cons (f (car L)) (map f (cdr L))) (quote ))))
+(define quadrado (lambda (x) (* x x)))
+(map (lambda (n) (* n n)) (range 0 10))
+
+(define filter
+    (lambda (condicao lista)
+        (if (= (length lista) 0)
+            (quote ())
+            (if (condicao (car lista))
+                (list (car lista) (filter condicao (cdr lista)))
+                (filter condicao (cdr lista))
+            )
+        )
+    )
+)
+
+(define filter (lambda (condicao lista) (if (= (length lista) 0) (quote ()) if (condicao (car lista)) (list (car lista) (filter condicao (cdr lista))) (filter condicao (cdr lista))))))
+
+
+(define ehPar (lambda (x) (if (= (% x 2) 0) true false)))
